@@ -4,6 +4,7 @@
     --tertiary_grey: #DDDDDD;
     --hover_grey: #b5b5b5;
     --dark_grey: #77716c;
+    --border_grey: #e0e0e0;
     --primary_brown: #1f1a17;
     --secondary_brown: #232323;
     --light_brown: #B88B5F;
@@ -12,9 +13,17 @@
     --shop_background: #f7f7f7;
     --white: #FFFFFF;
     --black: #000000;
+    --opaque_black: rgba(0, 0, 0, 0.3);
     --primary_green: #16b36e;
     --primary_orange: #f36e4a;
     --primary_red: #f34a53;
+}
+
+@font-face {
+    font-family: 'Poppins300';
+    src: url('../public/assets/Fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
@@ -55,10 +64,69 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 * {
     box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins700", sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.mySwiper {
+    padding-top: 4.5rem;
+}
+
+.mySwiper .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    /* width: 10%!important; */
+}
+
+.mySwiper .swiper-horizontal>.mySwiper .swiper-pagination-bullets,
+.mySwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: 10%;
+    left: 85%;
+    bottom: 0;
+    justify-content: center;
+}
+
+.mySwiper .swiper-pagination-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 0.875rem;
+    background-color: transparent;
+}
+
+.mySwiper .swiper-pagination-bullet:hover {
+    color: var(--white);
+    text-decoration: line-through;
+    opacity: 1;
+    background-color: transparent;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+    color: var(--white);
+    text-decoration: line-through;
+    background-color: transparent;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,7 +134,24 @@ a {
         color-scheme: dark;
     }
     body {
-        color: white;
-        background: black;
+        color: var(--primary_grey);
+        background: var(--background);
+        font-size: 100%;
+    }
+    p {
+        font-size: 0.75rem;
+        font-family: "Poppins400", sans-serif;
+    }
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    p {
+        font-size: 1rem;
     }
 }

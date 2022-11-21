@@ -1,0 +1,333 @@
+.customBtn {
+    padding: 0.25rem 1rem;
+    font-size: 0.5rem;
+    font-family: "Poppins400", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.CardWrapper {
+    width: 100%;
+    border: 10px solid transparent;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.CardWrapper:hover {
+    background-color: var(--white);
+    border: 10px solid var(--white);
+}
+
+.cardImage {
+    width: 100%;
+    height: auto;
+    transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -webkit-transition: all 3s ease-in-out;
+}
+
+.cardContent {
+    margin-top: -1rem;
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem 0;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    position: relative;
+    z-index: 1;
+}
+
+.cardName {
+    padding-top: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--secondary_brown);
+    font-family: 'Poppins600', sans-serif;
+    font-size: 0.75rem;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.cardName:hover {
+    color: var(--light_brown)
+}
+
+.cardPrice {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.controls {
+    padding: 1rem 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta_btn {
+    padding: 0.15rem 0;
+    color: var(--secondary_brown);
+    font-size: 0.685rem;
+    font-family: 'Poppins500', sans-serif;
+    line-height: 1.125rem;
+    text-align: left;
+    letter-spacing: -0.3px;
+    border-bottom: 2px solid var(--secondary_brown);
+}
+
+.cardIcon {
+    padding-left: 0.625rem;
+}
+
+.card_two_Wrapper {
+    border: none;
+}
+
+.card_two_Wrapper:hover {
+    border: none;
+    background-color: transparent;
+}
+
+.card_two_image {
+    position: relative;
+}
+
+.card_two_Content:hover {
+    background-color: transparent;
+}
+
+.cardTwo_cta_btn {
+    display: none;
+    padding: 0.15rem 0.4rem;
+    color: var(--black);
+    font-size: 0.685rem;
+    font-family: 'Poppins500', sans-serif;
+    line-height: 1.125rem;
+    text-align: center;
+    letter-spacing: -0.3px;
+    background-color: transparent;
+    border: 2px solid var(--black);
+}
+
+.cardTwo_controls {
+    padding: 0;
+    position: absolute;
+    bottom: 5.25rem;
+    right: 0;
+}
+
+.cardBtnWrapper {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.cardBtnWrapper:hover {
+    background-color: var(--black);
+    border-right: none;
+}
+
+.cardBtnWrapper:hover .icon {
+    color: var(--white);
+}
+
+.cardBtnWrapper .cardIcon {
+    padding-right: 1rem;
+    border-right: 1px solid var(--opaque_black);
+}
+
+.cardTwo_Icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.icon {
+    background-color: "red";
+}
+
+.icon:hover {
+    color: var(--white)
+}
+
+@media (min-width: 768px) {
+    /* .cardName {
+        font-size: 1.375rem;
+    } */
+    .CardWrapper {
+        width: 33%;
+    }
+    .card_two_Wrapper {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .customBtn {
+        font-size: 0.75rem;
+    }
+    .CardWrapper {
+        width: 20%;
+        position: relative;
+    }
+    .cardContent {
+        padding: 1rem 0 0;
+    }
+    .controls {
+        transform: translateY(50%);
+        width: 100%;
+        opacity: 0;
+        padding: 1rem 0.5rem 0rem;
+        display: flex;
+        visibility: hidden;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+    }
+    .cardContent:hover {
+        background-color: #fff;
+        -webkit-transform: translateY(-40px);
+        -moz-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+    .cardContent:hover .controls {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .cta_btn,
+    .cardTwo_cta_btn {
+        font-size: 0.685rem;
+    }
+    .cardTwo_cta_btn {
+        display: block;
+        position: absolute;
+        left: 3rem;
+        bottom: 3rem;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.685rem;
+        font-family: 'Poppins500', sans-serif;
+        line-height: 1.125rem;
+        text-align: center;
+        letter-spacing: -0.3px;
+        background-color: var(--black);
+        color: var(--white);
+        transform: translateY(50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+    }
+    .cardTwo_cta_btn:hover {
+        background-color: transparent;
+        border: 2px solid var(--black);
+        color: var(--black);
+    }
+    .card_two_Wrapper {
+        /* TO BE CHANGED LAYER! */
+        width: 100%;
+        position: relative;
+        height: 26rem;
+    }
+    .card_two_Wrapper .cardImage {
+        height: 100%;
+    }
+    .cartBtn_Wrapper {
+        display: none;
+    }
+    .card_two_Content {
+        padding-top: 0;
+        margin-top: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .card_two_Content:hover {
+        background-color: transparent;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+    }
+    .card_two_Content .cardTitleWrapper {
+        padding-top: 1rem;
+        padding-left: 3rem;
+    }
+    .card_two_Content .cardName,
+    .card_two_Content .cardPrice {
+        text-align: left;
+        font-family: "Poppins400", sans-serif;
+    }
+    .card_two_Content:hover .cardTwo_cta_btn {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .cardTwo_controls {
+        padding: 0;
+        position: absolute;
+        bottom: 0rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cardTwo_Icons {
+        background-color: transparent;
+        position: absolute;
+        right: 0;
+        bottom: -0;
+    }
+    .cartEyeBtn {
+        transform: translateY(50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+    }
+    .cartHeartBtn {
+        transform: translateY(50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -webkit-transition: all 0.6s ease-in-out;
+    }
+    .card_two_Content:hover .cartEyeBtn,
+    .card_two_Content:hover .cartHeartBtn {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .cardIcon {
+        border-right: none;
+    }
+}
