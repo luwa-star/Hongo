@@ -172,7 +172,7 @@
         width: 33%;
     }
     .card_two_Wrapper {
-        width: 48%;
+        width: 33%;
     }
 }
 
@@ -245,7 +245,7 @@
         color: var(--black);
     }
     .card_two_Wrapper {
-        /* TO BE CHANGED LAYER! */
+        /* TO BE CHANGED LATER! */
         width: 100%;
         position: relative;
         height: 26rem;
